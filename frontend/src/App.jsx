@@ -231,7 +231,7 @@ export default function App() {
       const data = await response.json().catch(() => ({}))
       if (!response.ok) throw new Error(data.error?.message || 'The sample check could not be completed.')
 
-      setResult({ title: 'Sample submission successful' })
+      setResult({ title: 'Card Activated' })
       toast.success('Sample check successful')
     } catch (error) {
       toast.error(error.message || 'Could not reach the CardlyConfirm backend. Make sure it is running.')
