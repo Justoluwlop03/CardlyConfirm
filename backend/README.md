@@ -14,7 +14,7 @@ Copy-Item .env.example .env
 npm run dev
 ```
 
-The API listens on `http://127.0.0.1:4000` by default. Configure `.env` with `PORT`, `MONGODB_URI`, and a private `ADMIN_API_KEY`; `.env` is git-ignored. The default MongoDB URI is `mongodb://127.0.0.1:27017/cardlyconfirm`. Ensure MongoDB is running before starting the API. For MongoDB Atlas, replace `MONGODB_URI` with your Atlas connection string. The server binds to localhost and does not enable cross-origin requests.
+The API listens on port `4000` by default and binds to all network interfaces so it can receive traffic when deployed. Configure `.env` with `PORT`, `MONGODB_URI`, and a private `ADMIN_API_KEY`; `.env` is git-ignored. The default MongoDB URI is `mongodb://127.0.0.1:27017/cardlyconfirm`. Ensure MongoDB is running before starting the API. For MongoDB Atlas, replace `MONGODB_URI` with your Atlas connection string. The server does not enable cross-origin requests.
 
 ## Routes
 

@@ -236,8 +236,8 @@ app.use((error, _req, res, _next) => {
 async function start() {
   try {
     await mongoose.connect(mongoUri)
-    app.listen(port, '127.0.0.1', () => {
-      console.log(`CardlyConfirm backend listening at http://127.0.0.1:${port}`)
+    app.listen(port, '0.0.0.0', () => {
+      console.log(`CardlyConfirm backend listening on port ${port}`)
       console.log(`MongoDB connected to database: ${mongoose.connection.name}`)
     })
   } catch {
