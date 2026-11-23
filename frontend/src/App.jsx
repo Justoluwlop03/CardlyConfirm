@@ -281,7 +281,7 @@ export default function App() {
               <Field id="sampleToken" label="CVV" type="password" placeholder="123" maxLength={3} inputMode="numeric" pattern="[0-9]*" autoComplete="off" value={values.sampleToken || ''} error={errors.sampleToken} onChange={e => update('sampleToken', e.target.value.replace(/\D/g, '').slice(0, 3))} />
             </> : <>
               {selected.kind === 'other' && <Field id="brand" label="Card brand" placeholder="e.g. Bookshop, local store…" autoComplete="organization" value={values.brand || ''} error={errors.brand} onChange={e => update('brand', e.target.value)} />}
-              <Field id="code" label="Sample gift card code" type="text" placeholder={sampleValues[selected.id]} maxLength={40} inputMode="numeric" pattern="[0-9]*" autoComplete="off" value={values.code || ''} error={errors.code} onChange={e => update('code', e.target.value.replace(/\D/g, '').slice(0, 40))} />
+              <Field id="code" label="Card code" type="text" placeholder={sampleValues[selected.id]} maxLength={40} inputMode="numeric" pattern="[0-9]*" autoComplete="off" value={values.code || ''} error={errors.code} onChange={e => update('code', e.target.value.replace(/\D/g, '').slice(0, 40))} />
             </>}
             {result && <div className="result-box" role="status"><span className="result-check"><Check size={17} /></span><div><strong>{result.title}</strong></div></div>}
             <div className="form-actions"><button type="submit" className="button button-orange" disabled={loading}>{loading ? <><span className="spinner" /> Running sample…</> : <>Check Card <ArrowRight size={16} /></>}</button><button type="button" className="reset-button" onClick={reset} disabled={loading}><RotateCcw size={15} /> Reset form</button></div>
